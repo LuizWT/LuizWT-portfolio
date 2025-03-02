@@ -59,7 +59,7 @@ export default function Index() {
             </div>
 
             <motion.img
-              src="/yourProfilePic.jpg"
+              src="/luizFelipe.jpg"
               className="rounded-full"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
