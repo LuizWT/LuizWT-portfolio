@@ -12,27 +12,25 @@ export const projects: ProjectI[] = [
     {
         title: "Portfólio", // titulo do seu projeto.
         description:
-            "Projeto pessoal e template open-source, utilizando Remix e TailwindCSS.", // breve descricao do seu projeto
+            "Meu portfólio profissional, desenvolvido com tecnologias modernas e utilizando um template open-source altamente customizável.", // breve descricao do seu projeto
         imageUrl: "/assests/portfolioImage.png", // imagem de banner do seu projeto, recomendo que coloque na pasta /assets/ na pasta public
-        liveUrl: "https://portfolio-pinuya.vercel.app/", // link do seu site deployado (se n houver pode deletar a linha)
-        repoUrl: "https://github.com/pinuya/portfolio-template", // link do seu rep
+        liveUrl: "https://luizwt-portfolio.onrender.com", // link do seu site deployado (se n houver pode deletar a linha)
+        repoUrl: "https://github.com/LuizWT/LuizWT-portfolio", // link do seu rep
     },
     {
-        title: "Sylvanian Families Store",
+        title: "AutoRecon",
         description:
-            "Projeto em desenvolvimento, uma lojinha de e-commerce de Sylvanian Families.",
+            "O AutoRecon é um projeto de automação de ferramentas de segurança focado em facilitar o processo de varredura e coleta de informações em ambientes de rede.",
 
-        imageUrl: "/assests/sylvanianStore.png",
-        liveUrl: "https://github.com/pinuya",
-        repoUrl: "https://github.com/pinuya",
+        imageUrl: "/assests/autorecon.png",
+        repoUrl: "https://github.com/LuizWT/AutoRecon",
     },
     {
-        title: "TicTacToe",
+        title: "SM64Crypt",
         description:
-            "Projeto que refatorei recentemente de um jogo da velha para jogar com amigos.",
+            "O SM64 Crypt é uma ferramenta eficiente para criptografia e descriptografia de arquivos, inspirada no jogo Super Mario 64.",
 
-        imageUrl: "/assests/ticTacToe.png",
-        liveUrl: "https://pinuya.github.io/tic-tac-toe/",
-        repoUrl: "https://github.com/pinuya/tic-tac-toe",
+        imageUrl: "/assests/sm64Crypt.png",
+        repoUrl: "https://github.com/LuizWT/SM64Crypt",
     },
 ];

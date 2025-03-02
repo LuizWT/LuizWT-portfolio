@@ -6,10 +6,10 @@ import Skills from "~/components/skills";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Portfolio" }, // coloque seu nome se quiser
+    { title: "LuizWT" }, // coloque seu nome se quiser
     {
       name: "Portfolio",
-      content: "Bem-vindos ao meu portfolio construido em Remix.",
+      content: "Bem-vindos ao meu portfolio.",
     },
   ];
 };
@@ -41,7 +41,7 @@ export default function Index() {
                 <h1 className="text-4xl">
                   I'm{" "}
                   <span className="font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                    Tifany.
+                    Luiz Felipe.
                   </span>
                 </h1>
               </motion.div>
@@ -49,13 +49,11 @@ export default function Index() {
               <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
                 {/* insira suas informacoes aqui */}
                 <span className="text-gray-400">
-                  Web Designer | Front-End Developer
+                  Python | Cybersegurança
                 </span>
                 <p className="text-gray-400 w-96 mt-4">
-                  Uma <b>Software Engineer</b> com foco no <b>Front-End</b>.
-                  Buscando sempre desenvolver telas robustas e responsivas.
-                  Sinto-me confortável projetando meus próprios designs e
-                  aplicando-os na prática durante o desenvolvimento.
+                  Um <b>programador</b> com foco em <b>Cibersegurança</b>.
+                  Buscando uma posição desafiadora na área de tecnologia ou área correlatas, onde posso aplicar meus conhecimentos como sistemas operacionais, office365, defesa cibernética, automação, etc. Podendo contribuir para a produtividade, proteção de sistemas e redes corporativas.
                 </p>
               </motion.div>
             </div>

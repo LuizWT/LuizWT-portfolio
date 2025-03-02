@@ -46,7 +46,7 @@ export function Nav() {
 
           {/* GitHub Link - Now: Visible in both mobile and desktop */}
           <Link 
-            to="https://github.com/pinuya" 
+            to="https://github.com/LuizWT" 
             className={`cursor-pointer ${isMenuOpen ? 'hidden sm:block' : 'block'}`}
           >
             <FaGithub className="hover:text-purple-500 h-5 w-5" />
