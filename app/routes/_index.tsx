@@ -74,7 +74,13 @@ export default function Index() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
           >
-            <div className="w-1 h-12 bg-gradient-to-b from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 rounded-full animate-pulse"></div>
+            <div 
+              className="w-3 h-16 animate-pulse bg-gradient-to-b from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400"
+              style={{
+                clipPath: 'polygon(30% 0, 70% 0, 100% 70%, 50% 100%, 0 70%)',
+                WebkitClipPath: 'polygon(30% 0, 70% 0, 100% 70%, 50% 100%, 0 70%)'
+              }}
+            ></div>
           </motion.div>
         </section>
 
