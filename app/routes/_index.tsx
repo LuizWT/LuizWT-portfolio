@@ -30,8 +30,8 @@ export default function Index() {
           id="hero"
           className="h-screen flex flex-col items-center justify-center gap-16 py-20"
         >
-          <div className="flex flex-col sm:flex-row gap-4 items-center">
-            <div>
+          <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
+            <div className="text-center sm:text-left">
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -47,25 +47,23 @@ export default function Index() {
               </motion.div>
 
               <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-                {/* insira suas informacoes aqui */}
-                <span className="text-gray-400">
-                  Python | Cybersegurança
-                </span>
-                <p className="text-gray-400 w-96 mt-4">
+                <span className="text-gray-400">Python | Cybersegurança</span>
+                <p className="text-gray-400 w-full sm:w-96 mt-4">
                   Um <b>programador</b> com foco em <b>Cibersegurança</b>.
-                  Buscando uma posição desafiadora na área de tecnologia ou área correlatas, onde posso aplicar meus conhecimentos como sistemas operacionais, office365, defesa cibernética, automação, etc. Podendo contribuir para a produtividade, proteção de sistemas e redes corporativas.
+                  Buscando uma posição desafiadora na área de tecnologia ou áreas correlatas, onde posso aplicar meus conhecimentos como sistemas operacionais, office365, defesa cibernética, automação, etc. Podendo contribuir para a produtividade, proteção de sistemas e redes corporativas.
                 </p>
               </motion.div>
             </div>
 
             <motion.img
               src="/luizFelipe.jpg"
-              className="rounded-full w-[30.5rem] h-[30.5rem]"
+              className="rounded-full w-52 h-52 sm:w-[30.5rem] sm:h-[30.5rem]"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
             />
           </div>
+
 
           {/* elemento decorativo */}
           <motion.div
