@@ -13,7 +13,7 @@ export const projects: ProjectI[] = [
         title: "Portfólio", // titulo do seu projeto.
         description:
             "Meu portfólio profissional, desenvolvido com tecnologias modernas e utilizando um template open-source altamente customizável.", // breve descricao do seu projeto
-        imageUrl: "/assests/portfolioImage.png", // imagem de banner do seu projeto, recomendo que coloque na pasta /assets/ na pasta public
+        imageUrl: "/assests/portfolioImageLuiz.png", // imagem de banner do seu projeto, recomendo que coloque na pasta /assets/ na pasta public
         liveUrl: "https://luizwt-portfolio.onrender.com", // link do seu site deployado (se n houver pode deletar a linha)
         repoUrl: "https://github.com/LuizWT/LuizWT-portfolio", // link do seu rep
     },
