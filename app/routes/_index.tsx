@@ -60,7 +60,7 @@ export default function Index() {
 
             <motion.img
               src="/luizFelipe.jpg"
-              className="rounded-full"
+              className="rounded-full w-[30.5rem] h-[30.5rem]"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
@@ -69,7 +69,7 @@ export default function Index() {
 
           {/* elemento decorativo */}
           <motion.div
-            className="p-20 hidden flex-col items-center sm:block"
+            className="p-15 hidden flex-col items-center sm:block"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
