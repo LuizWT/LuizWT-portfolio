@@ -55,7 +55,7 @@ export default function Index() {
 
                 {/* Botão de Download do CV */}
                 <motion.a
-                  href="/cv/curriculo_Luiz_Felipe.pdf" // Altere para o caminho correto do seu CV
+                  href="/curriculo_Luiz_Felipe.pdf" // Altere para o caminho correto do seu CV
                   download="LuizFelipe_CV.pdf"
                   className="mt-4 inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition"
                   initial={{ opacity: 0, y: 10 }}
