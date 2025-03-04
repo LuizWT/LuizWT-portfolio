@@ -50,9 +50,36 @@ export default function Index() {
                 <span className="text-gray-400">Python | Cybersegurança</span>
                 <p className="text-gray-400 w-full sm:w-96 mt-4">
                   Um <b>programador</b> com foco em <b>Cibersegurança</b>.
-                  Buscando uma posição desafiadora na área de tecnologia ou áreas correlatas, onde posso aplicar meus conhecimentos como sistemas operacionais, office365, defesa cibernética, automação, etc. Podendo contribuir para a produtividade, proteção de sistemas e redes corporativas.
+                  Buscando uma posição desafiadora na área de tecnologia ou áreas correlatas, onde posso aplicar meus conhecimentos como sistemas operacionais, Office 365, defesa cibernética, automação, etc. Podendo contribuir para a produtividade, proteção de sistemas e redes corporativas.
                 </p>
+
+                {/* Botão de Download do CV */}
+                <motion.a
+                  href="/cv/curriculo_Luiz_Felipe.pdf" // Altere para o caminho correto do seu CV
+                  download="LuizFelipe_CV.pdf"
+                  className="mt-4 inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                >
+                  <svg
+                    className="w-5 h-5 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 12v8h16v-8M12 16V4m0 0l-4 4m4-4l4 4"
+                    />
+                  </svg>
+                  Download CV
+                </motion.a>
               </motion.div>
+
             </div>
 
             <motion.img
