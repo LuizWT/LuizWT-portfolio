@@ -1,18 +1,17 @@
 import { exec } from "child_process";
 
-const target = "luizwt-portfolio.onrender.com";
-const interval = 2 * 60 * 1000; // 2 minutos em milissegundos
+const target = "https://luizwt-portfolio.onrender.com";
+const interval = 2 * 60 * 1000; // 2 minutos
 
-const ping = () => {
-  exec(`ping -c 1 ${target}`, (error, stdout, stderr) => {
+const checkSite = () => {
+  exec(`curl -Is ${target} | head -n 1`, (error, stdout, stderr) => {
     if (error) {
-      console.error(`Erro ao pingar ${target}: ${stderr}`);
+      console.error(`Erro ao acessar ${target}: ${stderr}`);
     } else {
-      console.log(`Ping bem-sucedido em ${target}:\n${stdout}`);
+      console.log(`Status de ${target}: ${stdout.trim()}`);
     }
   });
 };
 
-// Inicia o ping imediatamente e repete a cada 2 minutos
-ping();
-setInterval(ping, interval);
+checkSite();
+setInterval(checkSite, interval);
