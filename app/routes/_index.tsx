@@ -1,23 +1,32 @@
 import type { MetaFunction } from "@remix-run/node";
 import { motion } from "motion/react";
+import React, { FormEvent } from "react";
 import Experience from "~/components/experience";
 import Projects from "~/components/projects";
 import Skills from "~/components/skills";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "LuizWT" }, // coloque seu nome se quiser
-    {
-      name: "Portfolio",
-      content: "Bem-vindos ao meu portfolio.",
-    },
+    { title: "LuizWT" },
+    { name: "Portfolio", content: "Bem-vindos ao meu portfolio." },
   ];
 };
 
 export default function Index() {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const subject = formData.get("subject") as string;
+    const message = formData.get("message") as string;
+    const body = `Assunto: ${subject}\n\nDescrição:\n${message}`;
+    window.location.href = `mailto:luizfelipe.sec@proton.me?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <div className="flex flex-col min-h-screen w-full">
-      {/* background */}
+      {/* Background */}
       <div className="pointer-events-none fixed inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
         <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
@@ -25,7 +34,7 @@ export default function Index() {
       </div>
 
       <div className="flex flex-col min-h-[100dvh] z-10">
-        {/* conteudo principal do seu portfolio */}
+        {/* Conteúdo principal do portfolio */}
         <section
           id="hero"
           className="h-screen flex flex-col items-center justify-center gap-16 py-20"
@@ -79,7 +88,6 @@ export default function Index() {
                   Download CV
                 </motion.a>
               </motion.div>
-
             </div>
 
             <motion.img
@@ -91,45 +99,41 @@ export default function Index() {
             />
           </div>
 
-
-          {/* elemento decorativo */}
+          {/* Elemento decorativo */}
           <motion.div
             className="p-15 hidden flex-col items-center sm:block"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
           >
-            <div 
+            <div
               className="w-3 h-16 animate-pulse bg-gradient-to-b from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400"
               style={{
-                clipPath: 'polygon(30% 0, 70% 0, 100% 70%, 50% 100%, 0 70%)',
-                WebkitClipPath: 'polygon(30% 0, 70% 0, 100% 70%, 50% 100%, 0 70%)'
+                clipPath: "polygon(30% 0, 70% 0, 100% 70%, 50% 100%, 0 70%)",
+                WebkitClipPath:
+                  "polygon(30% 0, 70% 0, 100% 70%, 50% 100%, 0 70%)",
               }}
             ></div>
           </motion.div>
         </section>
 
-        {/* sessao de skills e experiencia altere para suas skills e experiencia no componente skills.tsx e experience.tsx*/}
+        {/* Sessão de skills e experiência */}
         <motion.section
           id="skills"
-          className=" flex flex-col items-center justify-center gap-10"
+          className="flex flex-col items-center justify-center gap-10"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           <h1 className="text-4xl text-center">Habilidades e experiência</h1>
-
           <div className="flex flex-col gap-28">
-            {/* componente de skills */}
             <Skills />
-
-            {/* componente de experiencia */}
             <Experience />
           </div>
         </motion.section>
 
-        {/* sessao onde voce vai descrever sobre seus projetos altere seus projetos no componente de projects.tsx */}
+        {/* Sessão de projetos */}
         <motion.section
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -137,8 +141,54 @@ export default function Index() {
           className="mt-20 flex flex-col items-center justify-center"
         >
           <h1 className="text-4xl">Projetos</h1>
-
           <Projects />
+        </motion.section>
+
+        {/* Sessão de contato */}
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          id="contact"
+          className="mt-20 flex flex-col items-center justify-center"
+        >
+          <h1 className="text-4xl">Entre em Contato</h1>
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-4 w-full max-w-md bg-neutral-800 p-4 rounded-lg mt-8"
+          >
+            <div className="flex flex-col">
+              <label htmlFor="subject" className="text-white">
+                Assunto
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                className="p-2 rounded bg-neutral-700 text-white"
+                placeholder="Assunto do contato"
+                required
+              />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="message" className="text-white">
+                Descrição
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                className="p-2 rounded bg-neutral-700 text-white"
+                placeholder="Descrição da sua mensagem"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+            >
+              Enviar
+            </button>
+          </form>
         </motion.section>
       </div>
     </div>
