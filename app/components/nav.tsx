@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from "@remix-run/react";
 import { Menu, X } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const menuItems = [
   { name: "Home", href: "/" },
@@ -45,12 +45,14 @@ export function Nav() {
           </ul>
 
           {/* GitHub Link - Now: Visible in both mobile and desktop */}
-          <Link 
-            to="https://github.com/LuizWT" 
-            className={`cursor-pointer ${isMenuOpen ? 'hidden sm:block' : 'block'}`}
-          >
-            <FaGithub className="hover:text-purple-500 h-5 w-5" />
-          </Link>
+          <div className="flex space-x-4">
+            <Link to="https://github.com/LuizWT" className="cursor-pointer" target='_blank'>
+              <FaGithub className="hover:text-purple-500 h-5 w-5" />
+            </Link>
+            <Link to="https://linkedin.com/in/luizwt" className="cursor-pointer" target='_blank'>
+              <FaLinkedin className="hover:text-purple-500 h-5 w-5" />
+            </Link>
+          </div>
         </div>
 
         {/* Mobile Menu */}
