@@ -1,6 +1,13 @@
 // insira seus dados de experiencia aqui, caso nao tenha basta comentar o componente no arquivo _index.tsx ou excluir esse componente
 export const experiences = [
   {
+    company: "Dazsoft",
+    period: "2025-03 - O momento",
+    role: "(Estágio) Suporte Técnico",
+    description:
+      "Na área de Suporte Técnico, presto assistência em sistemas VoIP, diagnosticando falhas e prestando o suporte necessário para usuários do sistema."
+  },
+  {
     company: "Optera Sistemas",
     period: "2024-04 - 2024-08",
     role: "(Estágio) Desenvolvedor WEB",
