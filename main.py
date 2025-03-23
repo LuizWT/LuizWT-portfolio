@@ -1,6 +1,7 @@
 import discord
 from dotenv import load_dotenv
 from discord.ext import commands
+import asyncio
 import os
 
 intents = discord.Intents.all()
@@ -63,4 +64,7 @@ async def on_message(message: discord.Message):
 
     await bot.process_commands(message)
 
-bot.start(token)
+async def main():
+    await bot.start(token)
+
+asyncio.run(main())
