@@ -7,7 +7,7 @@
     "build": "remix vite:build",
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "node pingService.js & python3 main.py & remix-serve ./build/server/index.js",
+    "start": "node pingService.js & remix-serve ./build/server/index.js",
     "typecheck": "tsc"
   },
   "dependencies": {
